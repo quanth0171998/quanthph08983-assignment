@@ -51,7 +51,7 @@ const routes: Routes = [
         component: ClassDetailComponent
       },
       {
-        path: 'form-class',
+        path: 'form-class/:idSchool',
         component: FormClassComponent
       },
       {

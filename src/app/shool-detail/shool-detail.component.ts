@@ -23,7 +23,7 @@ export class ShoolDetailComponent implements OnInit {
   }
   getSchoolById(){
     this.schoolId = this.activatedRoute.paramMap.pipe(
-      map((params: ParamMap) => params.get('id')),//method map ở đây dùng để trả về id
+      map((params: ParamMap) => params.get('id')),
       switchMap(id => this.schoolService.getSchoolsById(id))
     ).subscribe(data => this.schoolDetail = data);
   }

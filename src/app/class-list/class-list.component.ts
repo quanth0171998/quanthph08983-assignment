@@ -20,14 +20,20 @@ export class ClassListComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.getListClassOfSchool(this.schoolId);
+    this.getListClassOfSchool();
+    this.getId();
   }
 
-  getListClassOfSchool(id){
+  getListClassOfSchool(){
     this.activatedRoute.paramMap.pipe(
       map(params => params.getAll('id')),
       switchMap(id => this.classService.getListClass(id))
     ).subscribe(data => this.classes = data);
+  }
+  getId(){
+    this.activatedRoute.paramMap.subscribe(param =>{
+      this.schoolId = param.get('id');
+    })
   }
 
 }

@@ -12,9 +12,9 @@
         </div>
         <div class="form-group">
             <label for="">School</label>
-        <select class="form-control" formControlName="schoolId">
-            <option value="" selected="selected" disabled>Chọn một trường học</option>
-            <option *ngFor="let id of schools" [ngValue]="id.id">{{id.name}}</option>
+        <select [value]="classForm.value.schoolId" class="form-control" formControlName="schoolId">
+            <!-- <option value="" selected="selected" disabled>Chọn một trường học</option> -->
+            <option *ngFor="let s of schools" [value]="s.id">{{s.name}}</option>
         </select>
         <div class="col alert alert-danger" *ngIf="schoolId.invalid && schoolId.errors.required && schoolId.touched">
             Chưa chọn trường học
