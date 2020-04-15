@@ -1,0 +1,23 @@
+<div class="table-school-list">
+    <h3>Thông tin chi tiết Trường</h3>
+    <div *ngIf="schoolDetail!=null">
+        <ul>
+            <li><strong>Tên trường: {{schoolDetail.name}}</strong></li>
+            <li><strong>Ảnh trường:
+                <div>
+                    <img [src]="schoolDetail.logo" alt="">
+                </div>
+                </strong>
+            </li>
+            <li><strong>Địa chỉ: {{schoolDetail.address}}</strong></li>
+            <li><strong>Hiệu trưởng: {{schoolDetail.president}}</strong></li>
+            <li><strong>Tỉnh: {{schoolDetail.province}}</strong></li>
+        </ul>
+        <div>
+            <h3>Cập nhật thông tin</h3>
+            <strong>Sửa thông tin trường học: <a [routerLink]="['/home/../../school-edit', schoolDetail.id]">Edit</a><br></strong>
+            <strong>Xóa trường học: <button class="btn btn-primary" (click)="removeSchool()">Delete</button><br></strong>
+            <strong>Hiển thị danh sách lớp học: <a [routerLink]="['/home/class-list', schoolDetail.id]">Show Class List</a></strong>
+        </div>
+    </div>
+</div>

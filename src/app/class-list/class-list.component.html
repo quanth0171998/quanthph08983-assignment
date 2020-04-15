@@ -1,0 +1,31 @@
+
+
+<div class="table-school-list">
+    <h3>Danh sách lớp học</h3>
+
+    <button class="btn btn-primary" [routerLink]="['/home/form-class']">Thêm Lớp học</button>
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">School ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Room number</th>
+            <th scope="col">Total Student</th>
+            <th scope="col">Main Teacher</th>
+            <th scope="col">Detail</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let class of classes">
+              <td>{{class.id}}</td>
+              <td>{{class.schoolId}}</td>
+              <td>{{class.name}}</td>
+              <td>{{class.roomNumber}}</td>
+              <td>{{class.totalStudent}}</td>
+              <td>{{class.mainTeacher}}</td>
+              <td><button class="btn btn-danger" [routerLink]="['./class-detail', class.id]">Chi tiết</button></td>
+          </tr>
+        </tbody>
+      </table>
+</div>

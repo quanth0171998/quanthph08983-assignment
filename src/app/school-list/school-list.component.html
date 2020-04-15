@@ -1,0 +1,35 @@
+
+<div class="table-school-list">
+    <h3>Danh sách trường học</h3>
+    <button class="btn btn-primary" [routerLink]="['/home/form-school']">Thêm trường học</button>
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Image</th>
+            <th scope="col">Address</th>
+            <th scope="col">president</th>
+            <th scope="col">province</th>
+            <th scope="col">Detail</th>
+            <!-- <th scope="col">Edit</th>
+            <th scope="col">Delete</th> -->
+            <th scope="col">Danh sách class</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let school of schools">
+              <td>{{school.id}}</td>
+              <td>{{school.name}}</td>
+              <td><img [src]="school.logo" [alt]="school.name"></td>
+              <td>{{school.address}}</td>
+              <td>{{school.president}}</td>
+              <td>{{school.province}}</td>
+              <td><button class="btn btn-danger" [routerLink]="['/home/school-detail', school.id]">Chi tiết</button></td>
+              <!-- <td><button class="btn btn-primary" [routerLink]="['/home/school-edit', school.id]">Sửa</button></td>
+              <td><button class="btn btn-success" >Xóa</button></td> -->
+              <td><button class="btn btn-primary" [routerLink]="['/home/class-list', school.id]">Danh sách lớp</button></td>
+          </tr>
+        </tbody>
+      </table>
+</div>

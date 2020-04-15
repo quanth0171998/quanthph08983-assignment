@@ -1,0 +1,53 @@
+
+<div class="table-school-list">
+
+    <h3>Form thêm lớp học</h3>
+    <form [formGroup]="classForm">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Name</label>
+            <input type="text" class="form-control" formControlName="name">
+        </div>
+        <div class="col alert alert-danger" *ngIf="name.invalid && name.errors.required && name.touched">
+            Không để trống tên
+        </div>
+        <div class="form-group">
+            <label for="">School</label>
+        <select class="form-control" formControlName="schoolId">
+            <option value="" selected="selected" disabled>Chọn một trường học</option>
+            <option *ngFor="let id of schools" [ngValue]="id.id">{{id.name}}</option>
+        </select>
+        <div class="col alert alert-danger" *ngIf="schoolId.invalid && schoolId.errors.required && schoolId.touched">
+            Chưa chọn trường học
+        </div>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Room number</label>
+            <input type="text" class="form-control" formControlName="roomNumber">
+        </div>
+        <div class="col alert alert-danger" *ngIf="roomNumber.invalid && roomNumber.errors.required && roomNumber.touched">
+            Không để trong số phòng
+        </div>
+
+
+        <div class="form-group">
+            <label for="exampleInputPassword1" >Total student</label>
+            <input type="text" class="form-control" formControlName="totalStudent">
+        </div>
+        <div class="col alert alert-danger" *ngIf="totalStudent.invalid && totalStudent.errors.required && totalStudent.touched">
+            Không để tổng số sinh viên
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputPassword1">Main Teacher</label>
+            <input type="text" class="form-control" formControlName="mainTeacher">
+        </div>
+        <div class="col alert alert-danger" *ngIf="mainTeacher.invalid && mainTeacher.errors.required && mainTeacher.touched">
+            Không để tên giáo viên chủ nhiệm
+        </div>
+        <!-- <div class="col alert alert-danger" *ngIf="mainTeacher.invalid && mainTeacher.errors.namePerson && mainTeacher.touched">
+            Tên hiệu trưởng không thể chứa số và kí tự đặc biệt
+        </div> -->
+        <button [disabled]="!classForm.valid" type="submit" class="btn btn-primary" (click)="addClass()">Lưu</button>&nbsp;
+        <button class="btn btn-primary" (click)="reset()">Reset</button>
+    </form>
+</div>

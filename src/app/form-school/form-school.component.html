@@ -1,0 +1,54 @@
+<div class="table-school-list">
+
+    <h3>Form thêm trường học</h3>
+    <form [formGroup]="schoolForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Name</label>
+            <input type="text" class="form-control" formControlName="name">
+        </div>
+        <div class="col alert alert-danger" *ngIf="name.invalid && name.errors.required && name.touched">
+            Không để trống tên
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Logo</label>
+            <input type="text" class="form-control" formControlName="logo">
+        </div>
+        <div class="col alert alert-danger" *ngIf="logo.invalid && logo.errors.required && logo.touched">
+            Không để trống logo
+        </div>
+        <div class="col alert alert-danger" *ngIf="logo.invalid && logo.errors.imageUrl && logo.touched">
+            Không đúng định dạng logo
+        </div>
+
+        
+        <div class="form-group">
+            <label for="exampleInputPassword1">Address</label>
+            <input type="text" class="form-control" formControlName="address">
+        </div>
+        <div class="col alert alert-danger" *ngIf="address.invalid && address.errors.required && address.touched">
+            Không để trống địa chỉ
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputPassword1">President</label>
+            <input type="text" class="form-control" formControlName="president">
+        </div>
+        <div class="col alert alert-danger" *ngIf="president.invalid && president.errors.required && president.touched">
+            Không để trống tên hiệu trưởng
+        </div>
+        <div class="col alert alert-danger" *ngIf="president.invalid && president.errors.namePerson && president.touched">
+            Tên hiệu trưởng không thể chứa số và kí tự đặc biệt
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputPassword1">Province</label>
+            <input type="text" class="form-control" formControlName="province">
+        </div>
+        <div class="col alert alert-danger" *ngIf="province.invalid && province.errors.required && province.touched">
+            Không để trống tỉnh thành
+        </div>
+
+        <button [disabled]="!schoolForm.valid" type="submit" class="btn btn-primary" (click)="saveSchool()">Lưu</button>&nbsp;
+        <button class="btn btn-primary" (click)="reset()">Reset</button>
+    </form>
+</div>
