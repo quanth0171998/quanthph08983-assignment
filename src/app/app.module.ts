@@ -19,6 +19,18 @@ import { ShoolDetailComponent } from './shool-detail/shool-detail.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { SchoolService } from './school.service';
 import { ClassService } from './class.service';
+import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatButtonModule } from '@angular/material/button';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatCardModule } from '@angular/material/card';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatDialogModule } from '@angular/material/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 const routes: Routes = [
@@ -74,10 +86,46 @@ const routes: Routes = [
 @NgModule({
   imports:      [
     BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule, FormsModule,
+    MatAutocompleteModule,
+        MatBadgeModule,
+        MatButtonModule,
+        MatButtonToggleModule,
+        MatCardModule,
+        MatCheckboxModule,
+        MatChipsModule,
+        MatStepperModule,
+        MatDatepickerModule,
+        MatDialogModule,
+        // MatExpansionModule,
+        // MatFormFieldModule,
+        // MatGridListModule,
+        // MatIconModule,
+        // MatInputModule,
+        // MatListModule,
+        // MatMenuModule,
+        // MatPaginatorModule,
+        // MatProgressBarModule,
+        // MatProgressSpinnerModule,
+        // MatRadioModule,
+        // MatRippleModule,
+        // MatSelectModule,
+        // MatSidenavModule,
+        // MatSliderModule,
+        // MatSlideToggleModule,
+        // MatSnackBarModule,
+        // MatSortModule,
+        // MatTableModule,
+        // MatTabsModule,
+        // MatToolbarModule,
+        // MatTooltipModule,
+        // MatTreeModule,
+        // MatNativeDateModule
+        BrowserAnimationsModule,
     RouterModule.forRoot(routes)
      ],
-  declarations: [ AppComponent, HelloComponent, ClassDetailComponent, ClassListComponent, FooterComponent, FormClassComponent, FormSchoolComponent, LayoutComponent, NavBarComponent, NotFoundComponent, SchoolListComponent, ShoolDetailComponent, SideNavComponent ],
+  declarations: [ AppComponent, HelloComponent, ClassDetailComponent, ClassListComponent, FooterComponent, FormClassComponent, FormSchoolComponent, LayoutComponent, NavBarComponent, NotFoundComponent, SchoolListComponent, ShoolDetailComponent, SideNavComponent, ConfirmDialogComponent ],
   bootstrap:    [ AppComponent ],
-  providers: [SchoolService, ClassService]
+  providers: [SchoolService, ClassService],
+  entryComponents: [ConfirmDialogComponent]
 })
 export class AppModule { }

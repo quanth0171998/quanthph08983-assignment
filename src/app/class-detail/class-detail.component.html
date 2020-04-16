@@ -1,6 +1,6 @@
 
 <div class="table-school-list">
-    <h3>Thông tin chi tiết nhân viên</h3>
+    <h3>Thông tin chi tiết lớp</h3>
     <div *ngIf="classDetail!=null">
         <ul>
             <li><strong>Tên lớp: {{classDetail.name}}</strong></li>
@@ -12,7 +12,7 @@
         <div>
             <h3>Cập nhật thông tin</h3>
             <strong>Sửa thôg tin lớp học: <a [routerLink]="['../../class-edit', classDetail.id]">Edit</a><br></strong>
-            <strong>Xóa lớp học: <button class="btn btn-primary" (click)="removeClass()">Delete</button><br></strong>
+            <strong>Xóa lớp học: <button class="btn btn-primary" (click)="openDialog()">Delete</button><br></strong>
         </div>
     </div>
 </div>

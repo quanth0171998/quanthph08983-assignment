@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ClassService } from '../class.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { map, switchMap, merge } from 'rxjs/operators';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.component';
 
 @Component({
   selector: 'app-class-detail',
@@ -16,7 +18,8 @@ export class ClassDetailComponent implements OnInit {
   constructor(
     private classService: ClassService,
     private router: Router,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private dialog: MatDialog
   ) { }
 
   ngOnInit(): void {
@@ -41,6 +44,19 @@ export class ClassDetailComponent implements OnInit {
       this.router.navigateByUrl(`/home/class-list/${this.a}`);
     })
     }
+  }
+  openDialog(){
+    const configDialog = new MatDialogConfig();
+    configDialog.data = {
+        message: 'Bạn có muốn xóa lớp này không?',
+        idSchool: this.a,
+        idClass: this.b,
+        buttonText: {
+          ok: 'Delete',
+          cancel: 'No'
+      }
+    }
+    const dialogRef = this.dialog.open(ConfirmDialogComponent, configDialog);
   }
 
 }
