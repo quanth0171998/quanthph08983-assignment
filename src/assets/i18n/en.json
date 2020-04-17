@@ -1,6 +1,8 @@
 {
   "layout": {
-    "title": "Manage School"
+    "title": "Manage School",
+    "setting": "Setting",
+    "login": "Login"
   },
   "sideNav":{
     "h": "Core",

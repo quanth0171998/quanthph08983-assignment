@@ -1,9 +1,11 @@
 {
   "layout": {
-    "title": "Quản lý trường học"
+    "title": "Quản lý trường học",
+    "setting": "Cài đặt",
+    "login": "Đăng nhập"
   },
   "sideNav":{
-    "h": "Nhân",
+    "h": "Tranh chính",
     "category": "Danh mục",
     "listMenu": "Quản lý trường học",
     "schoolList": "Danh sách trường học",
