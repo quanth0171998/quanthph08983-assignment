@@ -15,9 +15,9 @@
         </ul>
         <div>
             <h3>{{'schoolDetail.titleUpdate' | translate}}</h3>
-            <strong>{{'schoolDetail.edit' | translate}}: <a [routerLink]="['/home/../../school-edit', schoolDetail.id]">Edit</a><br></strong>
-            <strong>{{'schoolDetail.delete' | translate}}: <button class="btn btn-primary" (click)="openDialog()">Delete</button><br></strong>
-            <strong>{{'schoolDetail.showClass' | translate}}: <a [routerLink]="['/home/class-list', schoolDetail.id]">Show Class List</a></strong>
+            <strong>{{'schoolDetail.edit' | translate}}: <a [routerLink]="['/home/../../school-edit', schoolDetail.id]">{{'schoolDetail.btnEdit' | translate}}</a><br></strong>
+            <strong>{{'schoolDetail.delete' | translate}}: <button class="btn btn-primary" (click)="openDialog()">{{'schoolDetail.btnDelete' | translate}}</button><br></strong>
+            <strong>{{'schoolDetail.showClass' | translate}}: <a [routerLink]="['/home/class-list', schoolDetail.id]">{{'schoolDetail.showClass' | translate}}</a></strong>
         </div>
     </div>
 </div>

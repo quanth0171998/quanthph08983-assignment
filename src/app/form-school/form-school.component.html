@@ -7,14 +7,14 @@
             <input type="text" class="form-control" formControlName="name">
         </div>
         <div class="col alert alert-danger" *ngIf="name.invalid && name.errors.required && name.touched">
-            Không để trống tên
+            {{'validate.nameSchool' | translate}}
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">{{'schoolList.image' | translate}}</label>
             <input type="text" class="form-control" formControlName="logo">
         </div>
         <div class="col alert alert-danger" *ngIf="logo.invalid && logo.errors.required && logo.touched">
-            Không để trống logo
+            {{'validate.logo' | translate}}
         </div>
         <div class="col alert alert-danger" *ngIf="logo.invalid && logo.errors.imageUrl && logo.touched">
             Không đúng định dạng logo
@@ -26,7 +26,7 @@
             <input type="text" class="form-control" formControlName="address">
         </div>
         <div class="col alert alert-danger" *ngIf="address.invalid && address.errors.required && address.touched">
-            Không để trống địa chỉ
+            {{'validate.address' | translate}}
         </div>
 
         <div class="form-group">
@@ -34,7 +34,7 @@
             <input type="text" class="form-control" formControlName="president">
         </div>
         <div class="col alert alert-danger" *ngIf="president.invalid && president.errors.required && president.touched">
-            Không để trống tên hiệu trưởng
+            {{'validate.president' | translate}}
         </div>
         <div class="col alert alert-danger" *ngIf="president.invalid && president.errors.namePerson && president.touched">
             Tên hiệu trưởng không thể chứa số và kí tự đặc biệt
@@ -45,7 +45,7 @@
             <input type="text" class="form-control" formControlName="province">
         </div>
         <div class="col alert alert-danger" *ngIf="province.invalid && province.errors.required && province.touched">
-            Không để trống tỉnh thành
+            {{'validate.province' | translate}}
         </div>
 
         <button [disabled]="!schoolForm.valid" type="submit" class="btn btn-primary" (click)="saveSchool()">{{'schoolForm.btnSave' | translate}}</button>&nbsp;

@@ -56,5 +56,20 @@
     "titleUpdate": "Update class information",
     "edit": "Edit class information",
     "delete": "Delete class"
+  },
+  "validate": {
+    "nameSchool": "Field name cannot be empty",
+    "logo": "Field logo cannot be empty",
+    "address": "Field address cannot be empty",
+    "president":"Field logo cannot be empty",
+    "province": "Field logo cannot be empty"
+  }
+  ,
+  "validate2": {
+    "nameClass": "Field name cannot be empty",
+    "roomNumber": "Field room number cannot be empty",
+    "totalStudent":"Field total student cannot be empty",
+    "mainTeacher": "Field main teacher cannot be empty",
+    "school": "No school selected"
   }
 }

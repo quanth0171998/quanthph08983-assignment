@@ -56,5 +56,19 @@
     "titleUpdate": "Cập nhật thông tin lớp học",
     "edit": "Sửa thông tin lớp học",
     "delete": "Xóa lớp học"
+  },
+  "validate": {
+    "nameSchool": "Không để trống tên trường",
+    "logo": "Không để trống logo trường",
+    "address": "Không để trống địa chỉ",
+    "president":"Không để trống tên hiệu trưởng",
+    "province": "Không để trống tỉnh thành"
+  },
+  "validate2": {
+    "nameClass": "Không để trống tên lớp",
+    "roomNumber": "Không để trống số phòng",
+    "totalStudent":"Không để trống tổng số sinh viên",
+    "mainTeacher": "Không để trống tên giáo viên chủ nhiệm",
+    "school": "Chưa chọn trường"
   }
 }
