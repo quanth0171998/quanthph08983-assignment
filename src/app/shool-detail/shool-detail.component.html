@@ -1,4 +1,4 @@
-<div class="table-school-list">
+<!-- <div class="table-school-list">
     <h3>{{'schoolDetail.title' | translate}}</h3>
     <div *ngIf="schoolDetail!=null">
         <ul>
@@ -20,4 +20,32 @@
             <strong>{{'schoolDetail.showClass' | translate}}: <a [routerLink]="['/home/class-list', schoolDetail.id]">{{'schoolDetail.showClass' | translate}}</a></strong>
         </div>
     </div>
-</div>
+</div> -->
+<h2 class="a">{{'schoolDetail.title' | translate}}</h2>
+<div *ngIf="schoolDetail!=null">
+	<div class="container">
+		<div class="card">
+			<div class="container-fliud">
+				<div class="wrapper row">
+					<div class="preview col-md-6">
+						<div class="preview-pic tab-content">
+							<div class="tab-pane active" id="pic-1">
+								<img id="img" width="550px" height="400px" [src]="schoolDetail.logo" alt=""></div>
+							</div>
+						</div>
+						<div class="details col-md-6">
+							<h3 class="product-title">{{'schoolList.name' | translate}}: {{schoolDetail.name}}</h3>
+
+							<h5 class="">{{'schoolList.address' | translate}}: {{schoolDetail.address}}</h5>
+							<h5 class="">{{'schoolList.president' | translate}}: {{schoolDetail.president}} </h5>
+							<h5 class="">{{'schoolList.province' | translate}}: {{schoolDetail.province}}</h5>&nbsp;
+							<div class="action">
+								<button class="btn btn-success" [routerLink]="['/home/../../school-edit', schoolDetail.id]">{{'schoolDetail.btnEdit' | translate}}</button>&nbsp;
+								<button class="btn btn-primary" (click)="openDialog()">{{'schoolDetail.btnDelete' | translate}}</button>&nbsp;
+								<button class="btn btn-danger" [routerLink]="['/home/class-list', schoolDetail.id]">{{'schoolDetail.showClass' | translate}}</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>

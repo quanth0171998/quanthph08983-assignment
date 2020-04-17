@@ -3,7 +3,10 @@
     <h3>{{'classList.classList' | translate}}</h3>
 
     <button class="btn btn-primary" [routerLink]="['/home/form-class', schoolId]">{{'classList.addClass' | translate}}</button>
-    <table class="table">
+    <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+      <input class="form-control" type="text" placeholder="Search for..." aria-label="Search" name="searchClass" [(ngModel)]="searchClass"/>
+    </form>
+    <table class="table table-striped">
         <thead class="thead-dark">
           <tr>
             <th scope="col">{{'classList.id' | translate}}</th>
@@ -16,7 +19,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let class of classes">
+          <tr *ngFor="let class of classes | filter:searchClass">
               <td>{{class.id}}</td>
               <td>{{class.schoolId}}</td>
               <td>{{class.name}}</td>

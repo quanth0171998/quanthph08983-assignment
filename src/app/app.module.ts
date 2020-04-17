@@ -34,6 +34,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 
 const routes: Routes = [
   {
@@ -98,6 +100,7 @@ const routes: Routes = [
         MatStepperModule,
         MatDatepickerModule,
         MatDialogModule,
+        Ng2SearchPipeModule,
         // MatExpansionModule,
         // MatFormFieldModule,
         // MatGridListModule,

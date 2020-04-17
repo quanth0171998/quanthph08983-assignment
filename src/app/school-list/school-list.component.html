@@ -2,7 +2,10 @@
 <div class="table-school-list">
     <h2>{{'schoolList.schoolList' | translate}}</h2>
     <button class="btn btn-primary" [routerLink]="['/home/form-school']">{{'schoolList.addSchool' | translate}}</button>
-    <table class="table">
+    <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+      <input class="form-control" type="text" placeholder="Search for..." aria-label="Search" name="search" [(ngModel)]="searchSchool"/>
+    </form>
+    <table class="table table-striped">
         <thead class="thead-dark">
           <tr>
             <th scope="col">{{'schoolList.id' | translate}}</th>
@@ -18,7 +21,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let school of schools">
+          <tr *ngFor="let school of schools | filter:searchSchool">
               <td>{{school.id}}</td>
               <td>{{school.name}}</td>
               <td><img [src]="school.logo" width="130px" [alt]="school.name"></td>
