@@ -1,16 +1,16 @@
 <div class="table-school-list">
 
-    <h3>Form thêm trường học</h3>
+    <h3>{{'schoolForm.title' | translate}}</h3>
     <form [formGroup]="schoolForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
-            <label for="exampleInputEmail1">Name</label>
+            <label for="exampleInputEmail1">{{'schoolList.name' | translate}}</label>
             <input type="text" class="form-control" formControlName="name">
         </div>
         <div class="col alert alert-danger" *ngIf="name.invalid && name.errors.required && name.touched">
             Không để trống tên
         </div>
         <div class="form-group">
-            <label for="exampleInputPassword1">Logo</label>
+            <label for="exampleInputPassword1">{{'schoolList.image' | translate}}</label>
             <input type="text" class="form-control" formControlName="logo">
         </div>
         <div class="col alert alert-danger" *ngIf="logo.invalid && logo.errors.required && logo.touched">
@@ -22,7 +22,7 @@
 
         
         <div class="form-group">
-            <label for="exampleInputPassword1">Address</label>
+            <label for="exampleInputPassword1">{{'schoolList.address' | translate}}</label>
             <input type="text" class="form-control" formControlName="address">
         </div>
         <div class="col alert alert-danger" *ngIf="address.invalid && address.errors.required && address.touched">
@@ -30,7 +30,7 @@
         </div>
 
         <div class="form-group">
-            <label for="exampleInputPassword1">President</label>
+            <label for="exampleInputPassword1">{{'schoolList.president' | translate}}</label>
             <input type="text" class="form-control" formControlName="president">
         </div>
         <div class="col alert alert-danger" *ngIf="president.invalid && president.errors.required && president.touched">
@@ -41,14 +41,14 @@
         </div>
 
         <div class="form-group">
-            <label for="exampleInputPassword1">Province</label>
+            <label for="exampleInputPassword1">{{'schoolList.province' | translate}}</label>
             <input type="text" class="form-control" formControlName="province">
         </div>
         <div class="col alert alert-danger" *ngIf="province.invalid && province.errors.required && province.touched">
             Không để trống tỉnh thành
         </div>
 
-        <button [disabled]="!schoolForm.valid" type="submit" class="btn btn-primary" (click)="saveSchool()">Lưu</button>&nbsp;
-        <button class="btn btn-primary" (click)="reset()">Reset</button>
+        <button [disabled]="!schoolForm.valid" type="submit" class="btn btn-primary" (click)="saveSchool()">{{'schoolForm.btnSave' | translate}}</button>&nbsp;
+        <button class="btn btn-primary" (click)="reset()">{{'schoolForm.btnReset' | translate}}</button>
     </form>
 </div>

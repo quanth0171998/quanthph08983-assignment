@@ -1,23 +1,23 @@
 <div class="table-school-list">
-    <h3>Thông tin chi tiết Trường</h3>
+    <h3>{{'schoolDetail.title' | translate}}</h3>
     <div *ngIf="schoolDetail!=null">
         <ul>
-            <li><strong>Tên trường: {{schoolDetail.name}}</strong></li>
-            <li><strong>Ảnh trường:
+            <li><strong>{{'schoolList.name' | translate}}: {{schoolDetail.name}}</strong></li>
+            <li><strong>{{'schoolList.image' | translate}}:
                 <div>
                     <img width="200px" [src]="schoolDetail.logo" alt="">
                 </div>
                 </strong>
             </li>
-            <li><strong>Địa chỉ: {{schoolDetail.address}}</strong></li>
-            <li><strong>Hiệu trưởng: {{schoolDetail.president}}</strong></li>
-            <li><strong>Tỉnh: {{schoolDetail.province}}</strong></li>
+            <li><strong>{{'schoolList.address' | translate}}: {{schoolDetail.address}}</strong></li>
+            <li><strong>{{'schoolList.president' | translate}}: {{schoolDetail.president}}</strong></li>
+            <li><strong>{{'schoolList.province' | translate}}: {{schoolDetail.province}}</strong></li>
         </ul>
         <div>
-            <h3>Cập nhật thông tin</h3>
-            <strong>Sửa thông tin trường học: <a [routerLink]="['/home/../../school-edit', schoolDetail.id]">Edit</a><br></strong>
-            <strong>Xóa trường học: <button class="btn btn-primary" (click)="openDialog()">Delete</button><br></strong>
-            <strong>Hiển thị danh sách lớp học: <a [routerLink]="['/home/class-list', schoolDetail.id]">Show Class List</a></strong>
+            <h3>{{'schoolDetail.titleUpdate' | translate}}</h3>
+            <strong>{{'schoolDetail.edit' | translate}}: <a [routerLink]="['/home/../../school-edit', schoolDetail.id]">Edit</a><br></strong>
+            <strong>{{'schoolDetail.delete' | translate}}: <button class="btn btn-primary" (click)="openDialog()">Delete</button><br></strong>
+            <strong>{{'schoolDetail.showClass' | translate}}: <a [routerLink]="['/home/class-list', schoolDetail.id]">Show Class List</a></strong>
         </div>
     </div>
 </div>

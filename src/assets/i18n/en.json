@@ -1,0 +1,58 @@
+{
+  "layout": {
+    "title": "Manage School"
+  },
+  "sideNav":{
+    "h": "Core",
+    "category": "Category",
+    "listMenu": "School management",
+    "schoolList": "School list",
+    "addSchool": "Add school",
+    "index": "Index"
+  },
+  "schoolList": {
+    "schoolList": "School list",
+    "addSchool": "Add school",
+    "id": "ID",
+    "name": "Name",
+    "image": "Logo",
+    "address": "Address",
+    "president": "President",
+    "province": "Province",
+    "detail": "Detail",
+    "listClass": "List class"
+  },
+  "schoolForm":{
+    "title": "Add school form",
+    "btnSave": "Save",
+    "btnReset": "Reset"
+  },
+  "schoolDetail": {
+    "title": "School details",
+    "titleUpdate": "Update school information",
+    "edit": "Edit school information",
+    "delete": "Delete school",
+    "btnDelete": "Delete",
+    "btnEdit": "Edit",
+    "showClass": "Show list class"
+  },
+  "classList": {
+    "classList": "Class list",
+    "addClass": "Add class",
+    "id": "ID",
+    "schoolId": "School ID",
+    "name": "Name",
+    "roomNumber": "Room number",
+    "totalStudent": "Total Student",
+    "mainTeacher": "Main Teacher",
+    "detail": "Detail",
+    "school": "School"
+  },
+  "classDetail": {
+    "title": "Class details",
+    "mainTeacher": "Main teacher",
+    "titleUpdate": "Update class information",
+    "edit": "Edit class information",
+    "delete": "Delete class"
+  }
+}

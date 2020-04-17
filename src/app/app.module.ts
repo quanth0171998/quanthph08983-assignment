@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClientModule, HttpClient } from "@angular/common/http";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 import { AppComponent } from './app.component';
@@ -31,6 +31,8 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 
 const routes: Routes = [
@@ -121,7 +123,15 @@ const routes: Routes = [
         // MatTreeModule,
         // MatNativeDateModule
         BrowserAnimationsModule,
-    RouterModule.forRoot(routes)
+        HttpClientModule,
+    RouterModule.forRoot(routes),
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
      ],
   declarations: [ AppComponent, HelloComponent, ClassDetailComponent, ClassListComponent, FooterComponent, FormClassComponent, FormSchoolComponent, LayoutComponent, NavBarComponent, NotFoundComponent, SchoolListComponent, ShoolDetailComponent, SideNavComponent, ConfirmDialogComponent ],
   bootstrap:    [ AppComponent ],
@@ -129,3 +139,7 @@ const routes: Routes = [
   entryComponents: [ConfirmDialogComponent]
 })
 export class AppModule { }
+
+export function HttpLoaderFactory(http: HttpClient){
+  return new TranslateHttpLoader(http);
+}

@@ -4,14 +4,14 @@
     <h3>Form thêm lớp học</h3>
     <form [formGroup]="classForm">
         <div class="form-group">
-            <label for="exampleInputEmail1">Name</label>
+            <label for="exampleInputEmail1">{{'classList.name' | translate}}</label>
             <input type="text" class="form-control" formControlName="name">
         </div>
         <div class="col alert alert-danger" *ngIf="name.invalid && name.errors.required && name.touched">
             Không để trống tên
         </div>
         <div class="form-group">
-            <label for="">School</label>
+            <label for="">{{'classList.school' | translate}}</label>
         <select [value]="classForm.value.schoolId" class="form-control" formControlName="schoolId">
             <!-- <option value="" selected="selected" disabled>Chọn một trường học</option> -->
             <option *ngFor="let s of schools" [value]="s.id">{{s.name}}</option>
@@ -21,7 +21,7 @@
         </div>
         </div>
         <div class="form-group">
-            <label for="exampleInputPassword1">Room number</label>
+            <label for="exampleInputPassword1">{{'classList.roomNumber' | translate}}</label>
             <input type="text" class="form-control" formControlName="roomNumber">
         </div>
         <div class="col alert alert-danger" *ngIf="roomNumber.invalid && roomNumber.errors.required && roomNumber.touched">
@@ -30,7 +30,7 @@
 
 
         <div class="form-group">
-            <label for="exampleInputPassword1" >Total student</label>
+            <label for="exampleInputPassword1" >{{'classList.totalStudent' | translate}}</label>
             <input type="text" class="form-control" formControlName="totalStudent">
         </div>
         <div class="col alert alert-danger" *ngIf="totalStudent.invalid && totalStudent.errors.required && totalStudent.touched">
@@ -38,7 +38,7 @@
         </div>
 
         <div class="form-group">
-            <label for="exampleInputPassword1">Main Teacher</label>
+            <label for="exampleInputPassword1">{{'classList.mainTeacher' | translate}}</label>
             <input type="text" class="form-control" formControlName="mainTeacher">
         </div>
         <div class="col alert alert-danger" *ngIf="mainTeacher.invalid && mainTeacher.errors.required && mainTeacher.touched">
@@ -47,7 +47,7 @@
         <!-- <div class="col alert alert-danger" *ngIf="mainTeacher.invalid && mainTeacher.errors.namePerson && mainTeacher.touched">
             Tên hiệu trưởng không thể chứa số và kí tự đặc biệt
         </div> -->
-        <button [disabled]="!classForm.valid" type="submit" class="btn btn-primary" (click)="addClass()">Lưu</button>&nbsp;
-        <button class="btn btn-primary" (click)="reset()">Reset</button>
+        <button [disabled]="!classForm.valid" type="submit" class="btn btn-primary" (click)="addClass()">{{'schoolForm.btnSave' | translate}}</button>&nbsp;
+        <button class="btn btn-primary" (click)="reset()">{{'schoolForm.btnReset' | translate}}</button>
     </form>
 </div>

@@ -1,20 +1,20 @@
 
 <div class="table-school-list">
-    <h3>Danh sách trường học</h3>
-    <button class="btn btn-primary" [routerLink]="['/home/form-school']">Thêm trường học</button>
+    <h2>{{'schoolList.schoolList' | translate}}</h2>
+    <button class="btn btn-primary" [routerLink]="['/home/form-school']">{{'schoolList.addSchool' | translate}}</button>
     <table class="table">
         <thead class="thead-dark">
           <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Name</th>
-            <th scope="col">Image</th>
-            <th scope="col">Address</th>
-            <th scope="col">president</th>
-            <th scope="col">province</th>
-            <th scope="col">Detail</th>
+            <th scope="col">{{'schoolList.id' | translate}}</th>
+            <th scope="col">{{'schoolList.name' | translate}}</th>
+            <th scope="col">{{'schoolList.image' | translate}}</th>
+            <th scope="col">{{'schoolList.address' | translate}}</th>
+            <th scope="col">{{'schoolList.president' | translate}}</th>
+            <th scope="col">{{'schoolList.province' | translate}}</th>
+            <th scope="col">{{'schoolList.detail' | translate}}</th>
             <!-- <th scope="col">Edit</th>
             <th scope="col">Delete</th> -->
-            <th scope="col">Danh sách class</th>
+            <th scope="col">{{'schoolList.listClass' | translate}}</th>
           </tr>
         </thead>
         <tbody>
@@ -25,10 +25,10 @@
               <td>{{school.address}}</td>
               <td>{{school.president}}</td>
               <td>{{school.province}}</td>
-              <td><button class="btn btn-danger" [routerLink]="['/home/school-detail', school.id]">Chi tiết</button></td>
+              <td><button class="btn btn-danger" [routerLink]="['/home/school-detail', school.id]">{{'schoolList.detail' | translate}}</button></td>
               <!-- <td><button class="btn btn-primary" [routerLink]="['/home/school-edit', school.id]">Sửa</button></td>
               <td><button class="btn btn-success" >Xóa</button></td> -->
-              <td><button class="btn btn-primary" [routerLink]="['/home/class-list', school.id]">Danh sách lớp</button></td>
+              <td><button class="btn btn-primary" [routerLink]="['/home/class-list', school.id]">{{'schoolList.listClass' | translate}}</button></td>
           </tr>
         </tbody>
       </table>

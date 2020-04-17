@@ -1,0 +1,58 @@
+{
+  "layout": {
+    "title": "Quản lý trường học"
+  },
+  "sideNav":{
+    "h": "Nhân",
+    "category": "Danh mục",
+    "listMenu": "Quản lý trường học",
+    "schoolList": "Danh sách trường học",
+    "addSchool": "Thêm trường học",
+    "index": "Trang chủ"
+  },
+  "schoolList": {
+    "schoolList": "Danh sách trường học",
+    "addSchool": "Thêm trường học",
+    "id": "Mã trường",
+    "name": "Tên trường",
+    "image": "Hình ảnh",
+    "address": "Địa chỉ",
+    "president": "Hiệu trưởng",
+    "province": "Tỉnh thành",
+    "detail": "Chi tiết",
+    "listClass": "Danh sách lớp"
+  },
+  "schoolForm":{
+    "title": "Form thêm trường học",
+    "btnSave": "Lưu",
+    "btnReset": "Làm mới"
+  },
+  "schoolDetail": {
+    "title": "Thông tin chi tiết trường",
+    "titleUpdate": "Cập nhật thông tin trường học",
+    "edit": "Sửa thông tin trường học",
+    "delete": "Xóa trường học",
+    "btnDelete": "Xóa",
+    "btnEdit": "Sửa",
+    "showClass": "Hiển thị danh sách lớp"
+  },
+  "classList": {
+    "classList": "Danh sách lớp học",
+    "addClass": "Thêm lớp học",
+    "id": "Mã lớp",
+    "schoolId": "Mã trường",
+    "name": "Tên lớp",
+    "roomNumber": "Số phòng",
+    "totalStudent": "Tổng số sinh viên",
+    "mainTeacher": "GVCN",
+    "detail": "Chi tiết",
+    "school": "Trường học"
+  },
+  "classDetail": {
+    "title": "Thông tin chi tiết lớp",
+    "mainTeacher": "Giáo viên chủ nhiệm",
+    "titleUpdate": "Cập nhật thông tin lớp học",
+    "edit": "Sửa thông tin lớp học",
+    "delete": "Xóa lớp học"
+  }
+}

@@ -1,18 +1,18 @@
 
 <div class="table-school-list">
-    <h3>Thông tin chi tiết lớp</h3>
+    <h3>{{'classDetail.title' | translate}}</h3>
     <div *ngIf="classDetail!=null">
         <ul>
-            <li><strong>Tên lớp: {{classDetail.name}}</strong></li>
-            <li><strong>Mã trường: {{classDetail.schoolId}}</strong></li>
-            <li><strong>Số phòng: {{classDetail.roomNumber}}</strong></li>
-            <li><strong>Tổng số học sinh: {{classDetail.totalStudent}}</strong></li>
-            <li><strong>Giáo viên chủ nhiệm: {{classDetail.mainTeacher}}</strong></li>
+            <li><strong>{{'classList.name' | translate}}: {{classDetail.name}}</strong></li>
+            <li><strong>{{'classList.schoolId' | translate}}: {{classDetail.schoolId}}</strong></li>
+            <li><strong>{{'classList.roomNumber' | translate}}: {{classDetail.roomNumber}}</strong></li>
+            <li><strong>{{'classList.totalStudent' | translate}}: {{classDetail.totalStudent}}</strong></li>
+            <li><strong>{{'classDetail.mainTeacher' | translate}}: {{classDetail.mainTeacher}}</strong></li>
         </ul>
         <div>
-            <h3>Cập nhật thông tin</h3>
-            <strong>Sửa thôg tin lớp học: <a [routerLink]="['../../class-edit', classDetail.id]">Edit</a><br></strong>
-            <strong>Xóa lớp học: <button class="btn btn-primary" (click)="openDialog()">Delete</button><br></strong>
+            <h3>{{'classDetail.titleUpdate' | translate}}</h3>
+            <strong>{{'classDetail.edit' | translate}}: <a [routerLink]="['../../class-edit', classDetail.id]">{{'schoolDetail.btnEdit' | translate}}</a><br></strong>
+            <strong>{{'classDetail.delete' | translate}}: <button class="btn btn-primary" (click)="openDialog()">{{'schoolDetail.btnDelete' | translate}}</button><br></strong>
         </div>
     </div>
 </div>
